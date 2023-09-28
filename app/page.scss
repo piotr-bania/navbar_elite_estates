@@ -1,0 +1,32 @@
+@import './globals.scss';
+
+.page {
+    padding-top: 200px;
+
+    .heading_1 {
+        grid-area: 1 / 1 / 2 / 10;
+    }
+
+    .paragraph_1 {
+        grid-area: 2 / 1 / 3 / 10;
+        padding-bottom: 100px;
+    }
+
+    .image {
+        grid-area: 3 / 1 / 5 / 13;
+        width: 100%;
+        height: 100%;
+    }
+
+    .heading_2 {
+        grid-area: 3 / 2 / 4 / 10;
+        color: $white;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .paragraph_2 {
+        grid-area: 4 / 2 / 5 / 8;
+        color: $white;
+    }
+}

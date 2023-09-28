@@ -1,0 +1,143 @@
+@import '../globals.scss';
+
+
+#logo {
+    position: fixed;
+    color: $header;
+    z-index: 100;
+    width: 100%;
+    margin-top: 40px;
+    align-items: center;
+
+
+    .logo {
+        grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .link_1 {
+        grid-area: 1 / 6 / 2 / 7;
+    }
+
+    .link_2 {
+        grid-area: 1 / 9 / 2 / 10;
+    }
+
+    .link_3 {
+        grid-area: 1 / 10 / 2 / 11;
+    }
+
+    .link_4 {
+        grid-area: 1 / 11 / 2 / 12;
+    }
+
+    .menu {
+        grid-area: 1 / 12 / 2 / 13;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 9px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .line {
+        height: 2px;
+        width: 32px;
+        border-radius: 10px;
+        transition: transform .5s ease, margin .5s ease;
+    }
+
+    .top {
+        background: $header;
+    }
+
+
+    .bottom {
+        background: $header;
+    }
+
+    .open {
+        .top {
+            transform: rotate(45deg) translateX(2.5px) translateY(2.5px);
+        }
+
+        .bottom {
+            transform: rotate(-45deg) translateX(2.5px) translateY(-2.5px);
+        }
+    }
+
+    .menu_container {
+        position: fixed;
+        height: 100vh;
+        width: 65vw;
+        top: 0;
+        right: 0;
+        background: $quaternary;
+        backdrop-filter: blur(3px) saturate(150%);
+        z-index: 1;
+        opacity: 0;
+        box-shadow: -40px 0px 80px rgba(0, 0, 0, 0.25);
+        visibility: hidden;
+        transition: opacity .75s ease, visibility .75s ease;
+
+        .menu_container_1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+
+            h2 {
+                color: $header;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    color: $white;
+                    transform: translateX(20px);
+                }
+            }
+
+            .link {
+                position: absolute;
+                left: 40px;
+                height: 100%;
+                width: 100%;
+                padding-top: 40px;
+
+                .menu_container_link {
+                    position: relative;
+                    color: $header;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+
+                h1 {
+                    padding-top: 100px;
+                    padding-bottom: 10px;
+                }
+
+                .image {
+                    position: relative;
+                    top: 100px;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .menu.open~.menu_container {
+        opacity: 1;
+        visibility: visible;
+    }
+}
