@@ -4,8 +4,8 @@ import './navbar.scss'
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import Image from 'next/image'
 import {motion as m} from 'framer-motion'
+import Page_Layout from './Page_Layout'
 
 const variant = {
     open: {x: '0%'},
@@ -42,33 +42,72 @@ const Navbar = () => {
                 variants={variant}
                 transition={{duration: .75, ease: 'easeInOut'}}
             >
-                <div className='menu_container_1'>
-                    <Link className='link' href="/">
-                        <div className='menu_container_link'>Homepage</div>
+                
+                <Link href='/' className="box_shadow translatedComponent_1">
+                    <a className='menu_container_link'>Homepage</a>
+                    <Page_Layout 
+                        mainTitle="Welcome to Elite Estates"
+                        mainParagraph="Where Luxury Meets Elegance"
+                        imageSrc="/images/bedroom.jpg"
+                        imageAlt="bedroom"
+                        secondaryTitle="Discover your dream home among our collection of extraordinary estates"
+                        secondaryParagraph="With a focus on luxury and sophistication, Elite Estates brings you the finest real estate that exceeds every expectation"
+                        backgroundColor="#F2F0E4"
+                    />
+                </Link>
 
-                        <h1 className='heading_1'>Welcome to Elite Estates</h1>
-                        <p className='paragraph_1'>Where Luxury Meets Elegance</p>
+                <Link href='/about' className="box_shadow translatedComponent_2">
+                    <a className='menu_container_link'>About</a>
+                    <Page_Layout 
+                        mainTitle="About Elite Estates"
+                        mainParagraph="The Pinnacle of Luxury Real Estate"
+                        imageSrc="/images/interior.jpg"
+                        imageAlt="interior"
+                        secondaryTitle="Founded in 2023, Elite Estates has redefined the luxury real estate market"
+                        secondaryParagraph="We specialize in curating a portfolio of the world’s most extraordinary homes"
+                        backgroundColor="#E6DCCE" 
+                    />
+                </Link>
 
-                        <Image className='image' src="/images/bedroom.jpg" alt='bedroom' width={1920} height={1200} />
-                    </Link>
-                </div>
+                <Link href='/about' className="box_shadow translatedComponent_3">
+                    <a className='menu_container_link'>Listings</a>
+                    <Page_Layout 
+                        mainTitle="Exclusive Listings"
+                        mainParagraph="ThA Collection of Prestigious Properties"
+                        imageSrc="/images/mansion.jpg"
+                        imageAlt="mansion"
+                        secondaryTitle="Browse our handpicked listings of luxurious estates"
+                        secondaryParagraph="Each property is carefully selected to meet the highest standards of luxury and elegance"
+                        backgroundColor="#D9C9B9" 
+                    />
+                </Link>
 
-                <div className='menu_container_2'>
-                    <Link className='link' href="/about">
-                        <div className='menu_container_link'>About us</div>
+                <Link href='/about' className="box_shadow translatedComponent_4">
+                    <a className='menu_container_link'>Services</a>
+                    <Page_Layout 
+                        mainTitle="Our Services"
+                        mainParagraph="Tailored Real Estate Solutions"
+                        imageSrc="/images/suite.jpg"
+                        imageAlt="suite"
+                        secondaryTitle="From property scouting to after-sales support, Elite Estates provides a comprehensive range of services"
+                        secondaryParagraph="Let our expert team guide you through each step of your luxury real estate journey"
+                        backgroundColor="#CCA5A1" 
+                    />
+                </Link>
 
-                        <h1 className='heading_1'>Welcome to Elite Estates</h1>
-                        <p className='paragraph_1'>Where Luxury Meets Elegance</p>
-
-                        <Image className='image' src="/images/interior.jpg" alt='bedroom' width={1920} height={1200} />
-                    </Link>
-                </div>
+                <Link href='/about' className="box_shadow translatedComponent_5">
+                    <a className='menu_container_link'>Contact Us</a>
+                    <Page_Layout 
+                        mainTitle="Contact Elite Estates"
+                        mainParagraph="Get in Touch with Our Expert Team"
+                        imageSrc="/images/design.jpg"
+                        imageAlt="design"
+                        secondaryTitle="Have questions or need expert advice? Contact us today"
+                        secondaryParagraph="Our team of specialists is always available to assist you"
+                        backgroundColor="#BF827A" 
+                    />
+                </Link>
             </m.div>
-
-                    {/* <Link className='link' href="/about"><h2>About us</h2></Link>
-                    <Link className='link' href="/listings"><h2>Listings</h2></Link>
-                    <Link className='link' href="/services"><h2>Services</h2></Link>
-                    <Link className='link' href="/contact"><h2>Contact Us</h2></Link> */}
         </section>
     )
 }

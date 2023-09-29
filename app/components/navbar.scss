@@ -70,6 +70,13 @@
         }
     }
 
+    .menu_container_link {
+        position: absolute;
+        padding: 40px;
+        color: $header;
+        text-transform: uppercase;
+    }
+
     .menu_container {
         position: fixed;
         height: 100vh;
@@ -80,58 +87,61 @@
         backdrop-filter: blur(3px) saturate(150%);
         z-index: 1;
         opacity: 0;
-        box-shadow: -40px 0px 80px rgba(0, 0, 0, 0.25);
         visibility: hidden;
         transition: opacity .75s ease, visibility .75s ease;
 
-        .menu_container_1 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100vh;
+        .box_shadow {
+            box-shadow: -40px 0px 80px rgba(0, 0, 0, 0.25);
+            transition: transform .5s ease;
+        }
 
-            h2 {
-                color: $header;
-                transition: all 0.3s ease-in-out;
+        .translatedComponent_1 {
+            position: absolute;
+            transform: translateX(0%);
+            z-index: 1;
 
-                &:hover {
-                    color: $white;
-                    transform: translateX(20px);
-                }
+            &:hover {
+                transform: translateX(-5%);
             }
+        }
 
-            .link {
-                position: absolute;
-                left: 40px;
-                height: 100%;
-                width: 100%;
-                padding-top: 40px;
+        .translatedComponent_2 {
+            position: absolute;
+            transform: translateX(20%);
+            z-index: 2;
 
-                .menu_container_link {
-                    position: relative;
-                    color: $header;
-                    text-transform: uppercase;
-                    transition: all 0.3s ease-in-out;
+            &:hover {
+                transform: translateX(15%);
+            }
+        }
 
-                    &:hover {
-                        color: $primary;
-                    }
-                }
+        .translatedComponent_3 {
+            position: absolute;
+            transform: translateX(40%);
+            z-index: 3;
 
-                h1 {
-                    padding-top: 100px;
-                    padding-bottom: 10px;
-                }
+            &:hover {
+                transform: translateX(35%);
+            }
+        }
 
-                .image {
-                    position: relative;
-                    top: 100px;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    z-index: -1;
-                }
+        .translatedComponent_4 {
+            position: absolute;
+            transform: translateX(60%);
+            z-index: 4;
+
+            &:hover {
+                transform: translateX(55%);
+            }
+        }
+
+        .translatedComponent_5 {
+            position: absolute;
+            transform: translateX(80%);
+            z-index: 5;
+
+            &:hover {
+                transform: translateX(75%);
             }
         }
     }

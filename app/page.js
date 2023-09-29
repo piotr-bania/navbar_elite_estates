@@ -7,9 +7,9 @@ export default function Home() {
             mainParagraph="Where Luxury Meets Elegance"
             imageSrc="/images/bedroom.jpg"
             imageAlt="bedroom"
-            secondaryTitle="Discover your dream home among our collection of extraordinary estates."
-            secondaryParagraph="With a focus on luxury and sophistication, Elite Estates brings you the finest real estate that exceeds every expectation."
-            backgroundColor="#F2F0E4"
+            secondaryTitle="Discover your dream home among our collection of extraordinary estates"
+            secondaryParagraph="With a focus on luxury and sophistication, Elite Estates brings you the finest real estate that exceeds every expectation"
+            backgroundColor="#F2F0E4" 
         />
     )
 }

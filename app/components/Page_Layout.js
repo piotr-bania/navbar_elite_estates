@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import styles from './Page_Layout.scss'
 
 const Page_Layout = ({ mainTitle, mainParagraph, imageSrc, imageAlt, secondaryTitle, secondaryParagraph, backgroundColor }) => {
     return (
